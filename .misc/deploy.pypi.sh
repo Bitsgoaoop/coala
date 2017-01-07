@@ -15,6 +15,7 @@ python3 setup.py sdist bdist_wheel
 set +e
 twine upload dist/*.whl -u "$PYPIUSER" -p "$PYPIPW"
 twine upload dist/*.tar.gz -u "$PYPIUSER" -p "$PYPIPW"
+twine upload dist/*.whl -r https://testpypi.python.org/pypi -u "$PYPIUSER" -p "$PYPIPW"
 set -e
 
 echo "Installing coala from pypi"
