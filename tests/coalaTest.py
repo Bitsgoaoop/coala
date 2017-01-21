@@ -38,7 +38,7 @@ class coalaTest(unittest.TestCase):
     def test_python_version_27(self):
         with self.assertRaises(SystemExit):
             assert_supported_version()
-            self.assertEqual(cm.error_code, 4)
+            self.assertEqual(cm.error_code, 6)
 
     @unittest.mock.patch('sys.version_info', tuple((3, 3, 6)))
     def test_python_version_33(self):
